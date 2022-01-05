@@ -399,7 +399,6 @@ section {
 }
 .login-account.active {
   visibility: visible;
-  animation: fadeDown ease 0.3s;
   opacity: 1;
 }
 .login-account .box-container {
@@ -413,6 +412,7 @@ section {
   background: white;
   border-radius: 1rem;
   text-align: center;
+  animation: fadeDown ease 0.3s;
 }
 .login-account .box-container .icon-btn {
   cursor: pointer;

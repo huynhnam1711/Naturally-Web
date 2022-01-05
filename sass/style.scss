@@ -478,9 +478,8 @@ body{
     opacity: 0;
     z-index: 1 !important;
 
-    &.active{
+    &.active {
         visibility: visible;
-        animation: fadeDown ease .3s;
         opacity: 1;
     }
 
@@ -495,6 +494,7 @@ body{
         background: rgba(255, 255, 255, 1);
         border-radius: 1rem;
         text-align: center;
+        animation: fadeDown ease .3s;
 
         .icon-btn{
             cursor: pointer;
