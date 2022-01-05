@@ -259,6 +259,9 @@ section {
 }
 .fruits .row .products-container .product h3,
 .vegetables .row .products-container .product h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
   padding-top: 0.5rem;
   font-size: 1.5rem;
   font-family: cursive;
