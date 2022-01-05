@@ -138,6 +138,7 @@ section {
   cursor: pointer;
 }
 .header .search-form .account-2 i {
+  margin-left: 1rem;
   font-size: 2rem;
   padding: 1rem;
 }
