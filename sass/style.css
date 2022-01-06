@@ -527,6 +527,7 @@ section {
   }
   .header .logo {
     margin: auto;
+    max-width: 100%;
     padding-bottom: .5rem;
   }
   .header .search-form {
