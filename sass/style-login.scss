@@ -262,7 +262,7 @@
 
 
 // responsive
-@media (max-width:1070px){
+@media (max-widthpx){
 
         .search-form{
             width: 90%;
@@ -293,3 +293,129 @@
         }
     }       
 }
+
+
+
+
+
+
+
+
+
+// css owl
+body { background-color: #f7f7f7; }
+	#content { margin: 150px auto; max-width: 760px; text-align: center; }
+#carousel_container {
+	width: 95%;
+	max-width: 600px;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+#carousel {
+	width: 600px;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	list-style-type: none;
+}
+#carousel li {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+#carousel li img {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#c1 {
+	width: 300px;
+	height: 250px;
+	left: 150px;
+	top: 25px;
+	z-index: 3;
+}
+#c2 {
+	width: 240px;
+	height: 200px;
+	left: 300px;
+	top: 50px;
+	z-index: 2;
+}
+#c3 {
+	width: 180px;
+	height: 150px;
+	left: 420px;
+	top: 75px;
+	z-index: 1;
+}
+#x1 {
+	width: 120px;
+	height: 100px;
+	left: 600px;
+	top: 100px;
+}
+#x2 {
+	width: 120px;
+	height: 100px;
+	left: -120px;
+	top: 100px;
+}
+#c4 {
+	width: 180px;
+	height: 150px;
+	left: 0px;
+	top: 75px;
+	z-index: 1;
+}
+#c5 {
+	width: 240px;
+	height: 200px;
+	left: 60px;
+	top: 50px;
+	z-index: 2;
+}
+
+.move img {
+	width: 50px;
+	height: 30px;
+	border: 3px solid #333;
+}
+.move.active img {
+	border: 3px solid #5a5;
+}
+
+#move_mark {
+	width: 95%;
+	max-width: 500px;
+	margin: 5px auto;
+	position: relative;
+	bottom: 0;
+}
+#move_mark a {
+	color: #666;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+#move_mark a.active, #move_mark a:hover {
+	color: #333;
+}
+#move_back {
+	margin: 0 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#move_next {
+	margin: 0 10px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+    

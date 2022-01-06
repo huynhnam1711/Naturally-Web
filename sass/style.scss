@@ -39,7 +39,7 @@ section{
 }
 
 body{
-    // background: #b2d17d;
+    background: #f6f7fb;
 }
 
 .btn{
@@ -264,6 +264,80 @@ body{
     }
 }
 
+// delivery
+#slider {
+    height: 30vh;
+    position: relative;
+    // perspective: 100rem;
+    transform-style: preserve-3d;
+
+    input{
+        opacity: 0;
+    }
+}
+
+#slider label {
+    margin: auto;
+    width: 70rem;
+    border-radius: .4rem;
+    position: absolute;
+    left: 0; right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+
+    .box{
+        text-align: center;
+        flex-wrap: wrap;
+        background: #fff;
+        
+        i{
+            font-size: 5rem;
+            margin: 2rem ;
+            color: #27ae60;
+        }
+
+        h3{
+            font-size: 2rem;
+            padding: 3rem;
+        }
+    }
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+    box-shadow: 0 .1rem .4rem 0 rgba(0,0,0,.37);
+    transform: translate3d(-30%,0,-20rem);
+}
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+    box-shadow: 0 .6rem 1rem 0 rgba(0,0,0,.3), 0 .2rem .2rem 0 rgba(0,0,0,.2);
+    transform: translate3d(-15%,0,-10rem);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+    box-shadow: 0 1.3rem 2.5rem 0 rgba(0,0,0,.3), 0 1.1rem .7rem 0 rgba(0,0,0,.19);
+    transform: translate3d(0,0,0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+    box-shadow: 0 .6rem 1rem 0 rgba(0,0,0,.3), 0 .2rem .2rem 0 rgba(0,0,0,.2);
+    transform: translate3d(15%,0,-10rem);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+    box-shadow: 0 .1rem .4rem 0 rgba(0,0,0,.37);
+    transform: translate3d(30%,0,-20rem);
+}
+
 .fruits,
 .vegetables{
 
@@ -294,6 +368,11 @@ body{
                 justify-content: center;
                 width: 100%;
                 border: .1rem solid rgba(138,138,138, .2);
+                background: #fff;
+
+                img{
+                    object-fit: cover;
+                }
 
                 .list-model{
                     position: absolute;
@@ -477,6 +556,60 @@ body{
     }
 }
 
+// contact
+.contacts{
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 2rem;
+        border: .1rem solid rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+
+        .image{
+            flex:  1 1 40rem;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        form{
+            flex: 1 1 40rem;
+            padding: 2rem 4rem;
+
+            .inputBox{
+                padding: 1rem 0;
+
+                h3{
+                    color: #319736;
+                    padding:.5rem 0;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    text-transform:none;
+                }
+
+                input{
+                    width: 100%;
+                    padding:1.5rem;
+                    font-size: 1.5rem;
+                    border:.1rem solid rgba(0,0,0,.1);
+                    border-radius: 5rem;
+                }
+
+                textarea{
+                    width: 100%;
+                    padding:1.5rem;
+                    font-size: 1.5rem;
+                    border:.1rem solid rgba(0,0,0,.1);
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -571,5 +704,37 @@ body{
     }
  
 }
+
+@media(max-width:850px){
+    #slider label {
+        width: 50rem;
+    }
+}
+
+@media(max-width:600px){
+    #slider label {
+        width: 40rem; 
+    }
+}
+
+@media(max-width:375px){
+    #slider label {
+        width: 34rem; 
+    }
+}
+
+@media(max-width:414px){
+    #slider label {
+        width: 33rem; 
+    }
+}
+
+@media(max-width:320px){
+    #slider label {
+        width: 27rem; 
+    }
+}
+
+
 
 

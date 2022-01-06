@@ -13,14 +13,18 @@
     <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
     <!--  -->
 
-     <!-- font awesome cdn link  -->
+     <!-- swiper cdn -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
+     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-login.css">
 
     <script src="js/script.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/swiper.js" defer></script>
 </head>
 <body>
     
@@ -62,6 +66,48 @@
         </div>
     </section>
     <!-- home section end -->
+
+    <!-- section delivery starts -->
+    <section id="slider">
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+        <input type="radio" name="slider" id="s5">
+        <label for="s1" id="slide1">
+            
+            <div class="box">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Giao hàng nhanh chóng</h3>
+            </div>
+        </label>
+        <label for="s2" id="slide2">
+            <div class="box">
+                <i class="fas fa-award"></i>
+                <h3>Sản phẩm chất lượng cao</h3>
+            </div>
+        </label>
+        <label for="s3" id="slide3">
+            <div class="box">
+                <i class="fas fa-apple-alt"></i>
+                <h3>Thực phẩm hữu cơ</h3>
+            </div>
+        </label>
+        <label for="s4" id="slide4">
+            <div class="box">
+                <i class="fas fa-undo"></i>
+                <h3>Hoàn trả dể dàng</h3>
+            </div>
+        </label>
+        <label for="s5" id="slide5">
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>Hổ trợ 27 x 7</h3>
+            </div>
+        </label>
+
+      </section>
+    <!-- section delivery end -->
 
 
     
@@ -917,7 +963,47 @@
     </section>
     <!-- section vegetables end -->
 
+    <!-- section contact starts -->
+    <section class="contacts" id="contacts">
 
+        <h1 class="heading"> <span> Liên hệ ngay</span></h1>
+
+        <div class="row">{
+
+            <div class="image">
+                <img src="img/about-img.jpg" alt="">
+            </div>
+
+            <form action="">
+                <form action="">
+
+                    <div class="inputBox">
+                        <h3>Full name</h3>
+                        <input type="text" placeholder="enter your name">
+                    </div>
+        
+                    <div class="inputBox">
+                        <h3>Email</h3>
+                        <input type="email" placeholder="enter your email">
+                    </div>
+        
+                    <div class="inputBox">
+                        <h3>Number</h3>
+                        <input type="number" placeholder="enter your number">
+                    </div>
+        
+                    <div class="inputBox">
+                        <h3>Message</h3>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+                    </div>
+        
+                    <input type="submit" value="send" class="btn">
+        
+                </form>
+            </form>
+        </div>
+    </section>
+    <!-- section contact end -->
 
 
 
