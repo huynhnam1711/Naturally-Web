@@ -172,6 +172,7 @@ section {
 }
 
 .header .search-form .account-2 i {
+  margin-left: 1rem;
   font-size: 2rem;
   padding: 1rem;
 }
@@ -338,6 +339,9 @@ section {
 
 .fruits .row .products-container .product h3,
 .vegetables .row .products-container .product h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
   padding-top: .5rem;
   font-size: 1.5rem;
   font-family: cursive;
@@ -390,6 +394,8 @@ section {
   margin-top: 8rem;
   width: 40rem;
   border-radius: 1rem;
+  -webkit-animation: fadeDown ease .3s;
+          animation: fadeDown ease .3s;
 }
 
 .products-preview .preview img {
@@ -509,9 +515,9 @@ section {
 
 .login-account.active {
   visibility: visible;
+  opacity: 1;
   -webkit-animation: fadeDown ease .3s;
           animation: fadeDown ease .3s;
-  opacity: 1;
 }
 
 .login-account .box-container {

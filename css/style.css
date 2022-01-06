@@ -305,6 +305,7 @@ section {
   margin-top: 8rem;
   width: 40rem;
   border-radius: 1rem;
+  animation: fadeDown ease 0.3s;
 }
 .products-preview .preview img {
   max-width: 100%;
@@ -400,6 +401,7 @@ section {
 .login-account.active {
   visibility: visible;
   opacity: 1;
+  animation: fadeDown ease 0.3s;
 }
 .login-account .box-container {
   position: absolute;
@@ -412,7 +414,6 @@ section {
   background: white;
   border-radius: 1rem;
   text-align: center;
-  animation: fadeDown ease 0.3s;
 }
 .login-account .box-container .icon-btn {
   cursor: pointer;
