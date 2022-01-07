@@ -119,8 +119,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -141,67 +139,6 @@ body {
   height: 3rem;
 }
 
-.header .search-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50rem;
-}
-
-.header .search-form input {
-  border: .1rem solid #333;
-  padding: 1.3rem;
-  width: 100%;
-  border-radius: 5rem;
-  text-transform: none;
-  font-size: 1.3rem;
-}
-
-.header .search-form .account-2 {
-  display: none;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #222;
-  text-transform: none;
-}
-
-.header .search-form .account-2:hover {
-  color: #6E8A3C;
-  cursor: pointer;
-}
-
-.header .search-form .account-2 i {
-  margin-left: 1rem;
-  font-size: 2rem;
-  padding: 1rem;
-}
-
-.header .search-form .icons {
-  display: none;
-}
-
-.header .search-form .icons i {
-  font-size: 2rem;
-}
-
-.header .search-form .icons i:hover {
-  color: #6E8A3C;
-}
-
-.header .search-form .icons .icon-left {
-  margin-left: 1rem;
-}
-
-.header .search-form .icons .icon-left:hover {
-  color: #6E8A3C;
-}
-
 .header .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,14 +146,21 @@ body {
   cursor: pointer;
 }
 
-.header .navbar .account {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #222;
+.header .navbar a {
+  font-size: 1.7rem;
+  color: #2c2c54;
+  margin: 0 1rem;
   text-transform: none;
+}
+
+.header .navbar a:hover {
+  color: #319736;
+}
+
+.header .navbar .account {
+  font-size: 1.7rem;
+  color: #2c2c54;
+  margin: 0 1rem;
 }
 
 .header .navbar .account:hover {
@@ -228,20 +172,102 @@ body {
   margin-right: 2rem;
 }
 
-.header .navbar .icons i {
+.header .icons div,
+.header .icons a {
   font-size: 2rem;
+  color: #2c2c54;
+  margin-left: 1.5rem;
 }
 
-.header .navbar .icons i:hover {
-  color: #6E8A3C;
+.header .icons div:hover,
+.header .icons a:hover {
+  color: #319736;
 }
 
-.header .navbar .icons .icon-left {
-  margin-left: .5rem;
+.header .icons:hover {
+  cursor: pointer;
 }
 
-.header .navbar .icons .icon-left:hover {
-  color: #6E8A3C;
+.header .search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header .search-form.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header .search-form #close-search {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.header .search-form #close-search:hover {
+  color: #319736;
+}
+
+.header .search-form form {
+  position: absolute;
+  top: 10%;
+  width: 90%;
+  margin: 0 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .search-form form input {
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+  padding-right: 2rem;
+}
+
+.header .search-form form input::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.header .search-form form input::-ms-input-placeholder {
+  color: #aaa;
+}
+
+.header .search-form form label {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.header .search-form form label:hover {
+  color: #219150;
 }
 
 .home {
@@ -622,21 +648,11 @@ body {
 
 @media (max-width: 1070px) {
   .header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    padding: 3rem 2rem;
   }
   .header .logo {
-    margin: auto;
     max-width: 100%;
     margin-bottom: .5rem;
-  }
-  .header .search-form {
-    width: 90%;
-  }
-  .header .search-form input {
-    width: 100%;
   }
   .header .search-form .account-2 {
     display: -webkit-box;
@@ -677,7 +693,7 @@ body {
     font-size: 55%;
   }
   .header {
-    padding: 1.5rem 0 2rem;
+    padding: 1.5rem 3rem;
   }
   .section {
     padding: 3rem 2rem;

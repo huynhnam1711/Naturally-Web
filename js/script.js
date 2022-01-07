@@ -88,16 +88,31 @@ $('.owl-carousel').owlCarousel({
     
     
     // login account 2
-    const acountSecond = document.querySelector('.account-2');
-    const modelTwo = document.querySelector('.login-account2');
-    const closeTwo = document.querySelector('.icon-btn2');
+    // const acountSecond = document.querySelector('.account-2');
+    // const modelTwo = document.querySelector('.login-account2');
+    // const closeTwo = document.querySelector('.icon-btn2');
     
-    acountSecond.addEventListener('click', showTwo);
+    // acountSecond.addEventListener('click', showTwo);
     
-    function showTwo() {
-      modelTwo.classList.add('active');
-    }
+    // function showTwo() {
+    //   modelTwo.classList.add('active');
+    // }
     
-    closeTwo.onclick = () =>{
-      modelTwo.classList.remove('active');
-    }
+    // closeTwo.onclick = () =>{
+    //   modelTwo.classList.remove('active');
+    // }
+
+// search-form
+let searchForm = document.querySelector('.search-form');
+let searchBtn = document.getElementById('search-btn');
+
+searchBtn.onclick = () =>{
+    searchForm.classList.add('active');
+}
+
+document.querySelector('#close-search').onclick = () =>{
+    searchForm.classList.remove('active');
+}
+
+
+

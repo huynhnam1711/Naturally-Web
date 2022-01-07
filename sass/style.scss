@@ -113,7 +113,6 @@ body{
     z-index: 99999;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding: 2rem 9%;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -125,82 +124,32 @@ body{
         width: 11rem;
         height: 4rem;
         cursor: pointer;
+
          img{
              width: 100%;
              height: 3rem;
-            //  filter: brightness(0.5);
          }
     }
-
-    .search-form{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 50rem;
-
-        input{
-            border: .1rem solid #333;
-            padding: 1.3rem;
-            width: 100%;
-            border-radius: 5rem;
-            text-transform: none;
-            font-size: 1.3rem;
-        }
-
-        .account-2{
-            display: none;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #222;
-            text-transform: none;
-            // margin-right: 3rem;
-
-            &:hover{
-                color: #6E8A3C;
-                cursor: pointer;
-            }
-
-            i{
-                margin-left: 1rem;
-                font-size: 2rem;
-                padding: 1rem;
-            }
-
-        }
-
-        .icons{
-            display: none;
-
-            i{
-                font-size: 2rem;
-
-                &:hover{
-                    color: #6E8A3C;
-                }
-            }
-
-            .icon-left{
-                margin-left: 1rem;
-
-                &:hover{
-                    color: #6E8A3C;
-                }
-            }
-        }
-    }
-
 
     .navbar{
         display: flex;
         cursor: pointer;
 
-        .account{
-            display: flex;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #222;
+        a{
+            font-size: 1.7rem;
+            color: #2c2c54;
+            margin: 0 1rem;
             text-transform: none;
-            // margin-right: 3rem;
+
+            &:hover{
+                color: #319736;
+            }
+        }
+
+        .account{
+            font-size: 1.7rem;
+            color: #2c2c54;
+            margin: 0 1rem;
 
             &:hover{
                 color: #6E8A3C;
@@ -211,27 +160,102 @@ body{
                 margin-right: 2rem;
             }
         }
+    }
 
-        .icons{
+    .icons{
 
-            i{
+        div,
+        a{
+            font-size: 2rem;
+            color: #2c2c54;
+            margin-left: 1.5rem;
+
+            &:hover{
+                color: #319736;
+            }
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .search-form{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,.8);
+        // transform: translateY(-100%);
+        visibility: hidden;
+        opacity: 0;
+    
+        &.active{
+            // transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+    
+        #close-search{
+            position: absolute;
+            top: 1.5rem;
+            right: 2.5rem;
+            cursor: pointer;
+            color: #fff;
+            font-size: 3rem;
+    
+            &:hover{
+                color: #319736;
+            }
+        }
+    
+        form{
+            position: absolute;
+            top: 10%;
+            width: 90%;
+            margin: 0 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 0.2rem solid #fff;
+            display: flex;
+            align-items: center;
+    
+            input{
+                width: 100%;
                 font-size: 2rem;
-
-                &:hover{
-                    color: #6E8A3C;
+                color: #fff;
+                text-transform: none;
+                background: none;
+                padding-right: 2rem;
+    
+                &::-webkit-input-placeholder{
+                    color: #aaa;
+                }
+    
+                &::-ms-input-placeholder {
+                    color: #aaa;
                 }
             }
-
-            .icon-left{
-                margin-left: .5rem;
-
+    
+            label{
+                font-size: 2.5rem;
+                cursor: pointer;
+                color: #fff;
+                
                 &:hover{
-                    color: #6E8A3C;
+                    color: #219150;
                 }
             }
         }
     }
 }
+
+
 
 
 .home{
@@ -594,18 +618,18 @@ body{
 // responsive
 @media (max-width:1070px){
     .header{   
-        flex-direction: column;
+        padding: 3rem 2rem;
+
         .logo {
-            margin: auto;
             max-width: 100%;
             margin-bottom: .5rem;
         }
 
         .search-form{
-            width: 90%;
+            // width: 100%;
 
             input{
-                width: 100%
+                // width: 90%
             }
 
             .account-2{
@@ -659,7 +683,7 @@ body{
     }
 
     .header {
-        padding: 1.5rem 0 2rem;
+        padding: 1.5rem 3rem;
     }
 
     .section{
