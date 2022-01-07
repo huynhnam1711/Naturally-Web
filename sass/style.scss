@@ -35,7 +35,7 @@ html{
 
 section{
     padding:2rem 9%;
-    padding-top: 9rem;
+    padding-top: 5rem;
 }
 
 body{
@@ -144,6 +144,7 @@ body{
             width: 100%;
             border-radius: 5rem;
             text-transform: none;
+            font-size: 1.3rem;
         }
 
         .account-2{
@@ -264,79 +265,33 @@ body{
     }
 }
 
+
 // delivery
-#slider {
-    height: 30vh;
-    position: relative;
-    // perspective: 100rem;
-    transform-style: preserve-3d;
+.delivery{
+    text-align: center;
 
-    input{
-        opacity: 0;
-    }
-}
+    .slide{
+        display: flex;
+        padding-top: 3rem;
 
-#slider label {
-    margin: auto;
-    width: 70rem;
-    border-radius: .4rem;
-    position: absolute;
-    left: 0; right: 0;
-    cursor: pointer;
-    transition: transform 0.4s ease;
 
-    .box{
-        text-align: center;
-        flex-wrap: wrap;
-        background: #fff;
-        
-        i{
-            font-size: 5rem;
-            margin: 2rem ;
-            color: #27ae60;
-        }
+        .box{
+            margin: auto;
 
-        h3{
-            font-size: 2rem;
-            padding: 3rem;
+            i{
+                color: #666;
+                padding: 2rem;
+                font-size: 6rem;
+            }
+
+            h3{
+                text-transform: none;
+                font-size: 1.7rem;
+            }
         }
     }
 }
 
-#s1:checked ~ #slide4, #s2:checked ~ #slide5,
-#s3:checked ~ #slide1, #s4:checked ~ #slide2,
-#s5:checked ~ #slide3 {
-    box-shadow: 0 .1rem .4rem 0 rgba(0,0,0,.37);
-    transform: translate3d(-30%,0,-20rem);
-}
-
-#s1:checked ~ #slide5, #s2:checked ~ #slide1,
-#s3:checked ~ #slide2, #s4:checked ~ #slide3,
-#s5:checked ~ #slide4 {
-    box-shadow: 0 .6rem 1rem 0 rgba(0,0,0,.3), 0 .2rem .2rem 0 rgba(0,0,0,.2);
-    transform: translate3d(-15%,0,-10rem);
-}
-
-#s1:checked ~ #slide1, #s2:checked ~ #slide2,
-#s3:checked ~ #slide3, #s4:checked ~ #slide4,
-#s5:checked ~ #slide5 {
-    box-shadow: 0 1.3rem 2.5rem 0 rgba(0,0,0,.3), 0 1.1rem .7rem 0 rgba(0,0,0,.19);
-    transform: translate3d(0,0,0);
-}
-
-#s1:checked ~ #slide2, #s2:checked ~ #slide3,
-#s3:checked ~ #slide4, #s4:checked ~ #slide5,
-#s5:checked ~ #slide1 {
-    box-shadow: 0 .6rem 1rem 0 rgba(0,0,0,.3), 0 .2rem .2rem 0 rgba(0,0,0,.2);
-    transform: translate3d(15%,0,-10rem);
-}
-
-#s1:checked ~ #slide3, #s2:checked ~ #slide4,
-#s3:checked ~ #slide5, #s4:checked ~ #slide1,
-#s5:checked ~ #slide2 {
-    box-shadow: 0 .1rem .4rem 0 rgba(0,0,0,.37);
-    transform: translate3d(30%,0,-20rem);
-}
 
 .fruits,
 .vegetables{
@@ -705,35 +660,7 @@ body{
  
 }
 
-@media(max-width:850px){
-    #slider label {
-        width: 50rem;
-    }
-}
 
-@media(max-width:600px){
-    #slider label {
-        width: 40rem; 
-    }
-}
-
-@media(max-width:375px){
-    #slider label {
-        width: 34rem; 
-    }
-}
-
-@media(max-width:414px){
-    #slider label {
-        width: 33gitrem; 
-    }
-}
-
-@media(max-width:320px){
-    #slider label {
-        width: 27rem; 
-    }
-}
 
 
 
