@@ -234,7 +234,7 @@ body {
 .delivery .slide .box i {
   color: #666;
   padding: 2rem;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 .delivery .slide .box h3 {
   text-transform: none;
@@ -514,6 +514,33 @@ body {
 @media (max-width: 768px) {
   .products-preview .preview img {
     height: 20rem;
+  }
+}
+@media (max-width: 414px) {
+  .delivery .slide .box i {
+    color: #666;
+    padding: 2rem;
+    font-size: 3rem;
+  }
+  .delivery .slide .box h3 {
+    text-transform: none;
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 375px) {
+  .fruits .products-container .product .price,
+.vegetables .products-container .product .price {
+    display: block;
+    color: #fea01c;
+    font-size: 1.4rem;
+    line-height: 2;
+    align-items: center;
+  }
+  .fruits .products-container .product .price .price-old,
+.vegetables .products-container .product .price .price-old {
+    color: #333;
+    font-size: 1.3rem;
+    text-decoration: line-through;
   }
 }
 

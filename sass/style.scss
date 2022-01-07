@@ -274,14 +274,13 @@ body{
         display: flex;
         padding-top: 3rem;
 
-
         .box{
             margin: auto;
 
             i{
                 color: #666;
                 padding: 2rem;
-                font-size: 6rem;
+                font-size: 4rem;
             }
 
             h3{
@@ -661,7 +660,54 @@ body{
 }
 
 
+@media(max-width:414px){
+    .delivery{
+    
+        .slide{
+    
+            .box{
+    
+                i{
+                    color: #666;
+                    padding: 2rem;
+                    font-size: 3rem;
+                }
+    
+                h3{
+                    text-transform: none;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
 
+@media(max-width:375px){
+    .fruits,
+    .vegetables{
 
+        .products-container{
+
+            .product{
+
+                .price{
+                    display: block;
+                    // padding-top: 1rem;
+                    color: #fea01c;
+                    font-size: 1.4rem;
+                    line-height: 2;
+                    align-items: center;
+
+                    .price-old{
+                        color: #333;
+                        font-size: 1.3rem;
+                        text-decoration: line-through;
+                    }
+                }
+
+            }
+        }
+    }
+}
 
 
