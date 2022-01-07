@@ -266,6 +266,7 @@ body {
 }
 
 .home .content h3 {
+  text-shadow: 0 0.5rem 1rem rgba(138, 138, 138, 0.3);
   font-family: cursive;
   font-weight: bolder;
   font-size: 4.5rem;
