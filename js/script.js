@@ -1,19 +1,41 @@
 $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:15,
-    nav:false,
-    responsive:{
-            0:{
-                items:3
-            },
-            600:{
-                items:2
-            },
-            1000:{
-                items:3
-            }
-        }
-    })
+  loop:true,
+  margin:15,
+  nav:false,
+  responsive:{
+    0:{
+        items:3
+    },
+    600:{
+        items:2
+    },
+    1000:{
+        items:3
+    }
+  }
+})
+
+// swiper-slide > sclient's
+var swiper = new Swiper(".review-slider", {
+  loop:true, 
+  grabCursor:true,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+  },
+});
     
     const model = document.querySelector('.login-account')
     const accoutn = document.querySelector('.account');
@@ -142,6 +164,11 @@ searchBox.oninput = () =>{
       }
    });
 };
+
+window.onscroll = () =>{
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+}
 
 
 
