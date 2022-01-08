@@ -62,7 +62,7 @@ $('.owl-carousel').owlCarousel({
     var result = document.getElementById('result');
     
     
-    // 
+    // quick view in index
     let previewContainer = document.querySelector('.products-preview');
     let previewBox = previewContainer.querySelectorAll('.preview');
     
@@ -78,6 +78,20 @@ $('.owl-carousel').owlCarousel({
         });
       };
     })
+
+    //quick view in search
+    document.querySelectorAll('.search-container .box').forEach(product =>{
+        product.onclick = () =>{
+          previewContainer.style.display = 'flex';
+          let name = product.getAttribute('data-name');
+          previewBox.forEach(preview =>{
+            let target = preview.getAttribute('data-target');
+            if(name == target){
+              preview.classList.add('active');
+            }
+          });
+        };
+      })
     
     previewBox.forEach(close =>{
       close.onclick = () =>{
@@ -86,22 +100,6 @@ $('.owl-carousel').owlCarousel({
       }
     })
     
-    
-    // login account 2
-    // const acountSecond = document.querySelector('.account-2');
-    // const modelTwo = document.querySelector('.login-account2');
-    // const closeTwo = document.querySelector('.icon-btn2');
-    
-    // acountSecond.addEventListener('click', showTwo);
-    
-    // function showTwo() {
-    //   modelTwo.classList.add('active');
-    // }
-    
-    // closeTwo.onclick = () =>{
-    //   modelTwo.classList.remove('active');
-    // }
-
 // search-form
 let searchForm = document.querySelector('.search-form');
 let searchBtn = document.getElementById('search-btn');
@@ -145,6 +143,27 @@ searchBox.oninput = () =>{
    });
 };
 
+
+
+
+
+
+
+
+// login account 2
+// const acountSecond = document.querySelector('.account-2');
+// const modelTwo = document.querySelector('.login-account2');
+// const closeTwo = document.querySelector('.icon-btn2');
+
+// acountSecond.addEventListener('click', showTwo);
+
+// function showTwo() {
+//   modelTwo.classList.add('active');
+// }
+
+// closeTwo.onclick = () =>{
+//   modelTwo.classList.remove('active');
+// }
 
 
 

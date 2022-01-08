@@ -157,6 +157,10 @@ body {
   background: rgba(0, 0, 0, 0.8);
   visibility: hidden;
   opacity: 0;
+  overflow-y: scroll;
+}
+.header .search-form::-webkit-scrollbar {
+  display: none;
 }
 .header .search-form.active {
   visibility: visible;
@@ -183,7 +187,6 @@ body {
 }
 .header .search-form .absolute-box input {
   width: 80%;
-  margin: 0 2rem;
   padding-bottom: 1rem;
   border-bottom: 0.2rem solid #fff;
   display: flex;
@@ -207,10 +210,11 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.5rem;
   padding-top: 3rem;
 }
 .header .search-form .absolute-box .search-container .box {
+  width: 100%;
   padding: 1.5rem;
   margin-bottom: 3rem;
   background-color: #333;
@@ -220,6 +224,7 @@ body {
   border-radius: 0.5rem;
   animation: fadeIn 0.2s linear;
   display: none;
+  text-align: center;
 }
 .header .search-form .absolute-box .search-container .box img {
   height: 25rem;
@@ -443,9 +448,10 @@ body {
   margin-top: 0.6rem;
 }
 .products-preview .preview .buttons a {
+  text-transform: none;
   flex: 1 1 16rem;
   padding: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #444;
   border: 0.1rem solid #444;
 }
