@@ -112,9 +112,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
-  background: #fff;
-  padding: 2rem 9%;
+  z-index: 99999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,8 +122,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 2rem 9%;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 
 .header #menu-btn {
@@ -133,18 +133,25 @@ body {
 }
 
 .header .logo {
-  font-size: 2.5rem;
-  color: #2c2c54;
+  width: 11rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.header .logo img {
+  width: 100%;
+  height: 3rem;
 }
 
 .header .navbar a {
+  text-transform: none;
   font-size: 1.7rem;
-  color: #2c2c54;
-  margin: 0 1rem;
+  margin-left: 1.5rem;
+  color: #333;
 }
 
 .header .navbar a:hover {
-  color: #ff9f1a;
+  color: #4e7013;
 }
 
 .header .icons div,
@@ -159,7 +166,11 @@ body {
   color: #ff9f1a;
 }
 
-.search-form {
+.header .icons:hover {
+  cursor: pointer;
+}
+
+.header .search-form {
   position: fixed;
   top: 0;
   left: 0;
@@ -177,33 +188,42 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   visibility: hidden;
   opacity: 0;
 }
 
-.search-form.active {
+.header .search-form.active {
   visibility: visible;
   opacity: 1;
 }
 
-.search-form #close-search {
+.header .search-form #close-search {
   position: absolute;
   top: 1.5rem;
   right: 2.5rem;
   cursor: pointer;
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
-.search-form #close-search:hover {
-  color: #2c2c54;
+.header .search-form #close-search:hover {
+  color: #319736;
+  cursor: pointer;
 }
 
-.search-form form {
-  width: 70rem;
+.header .search-form .absolute-box {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+}
+
+.header .search-form .absolute-box input {
+  width: 80%;
   margin: 0 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   border-bottom: 0.2rem solid #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,33 +231,79 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.search-form form input {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #fff;
   text-transform: none;
   background: none;
   padding-right: 2rem;
 }
 
-.search-form form input::-webkit-input-placeholder {
-  color: #aaa;
+.header .search-form .absolute-box input::-webkit-input-placeholder {
+  color: #bbb;
 }
 
-.search-form form input::-ms-input-placeholder {
-  color: #aaa;
+.header .search-form .absolute-box input::-ms-input-placeholder {
+  color: #bbb;
 }
 
-.search-form form label {
-  font-size: 3rem;
-  cursor: pointer;
+.header .search-form .absolute-box .search-container {
+  padding-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 3rem;
+}
+
+.header .search-form .absolute-box .search-container .box {
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  background-color: #333;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: .2rem solid #fff;
+  width: 35rem;
+  border-radius: .5rem;
+  -webkit-animation: fadeIn .2s linear;
+          animation: fadeIn .2s linear;
+  display: none;
+}
+
+.header .search-form .absolute-box .search-container .box img {
+  height: 25rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+.header .search-form .absolute-box .search-container .box h3 {
+  font-size: 2rem;
   color: #fff;
 }
 
-.search-form form label:hover {
-  color: #219150;
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0.5) translateY(-10px);
+            transform: scale(0.5) translateY(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0.5) translateY(-10px);
+            transform: scale(0.5) translateY(-10px);
+    opacity: 0;
+  }
 }
 
 .home {
@@ -621,8 +687,13 @@ body {
     padding: 3rem 2rem;
   }
   .header .logo {
-    max-width: 100%;
     margin-bottom: .5rem;
+  }
+  .header .search-form {
+    width: 100%;
+  }
+  .header .search-form input {
+    width: 90%;
   }
   .header .search-form .account-2 {
     display: -webkit-box;
@@ -633,9 +704,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .header .navbar {
-    display: none;
   }
   .login-account2 .box-container2 {
     width: 90%;
@@ -671,6 +739,36 @@ body {
 }
 
 @media (max-width: 768px) {
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header #menu-btn.fa-times {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #f2f2f2;
+    border: .2rem 0 .2rem 0 #666;
+    padding: 0 2rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-box-shadow: 0 0.5rem 1rem black;
+            box-shadow: 0 0.5rem 1rem black;
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 999999999999;
+  }
+  .header .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 2.5rem 1rem;
+  }
   .products-preview .preview h3 {
     font-family: 'Courier New', Courier, monospace;
     color: #444;

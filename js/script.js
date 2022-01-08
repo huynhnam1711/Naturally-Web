@@ -114,5 +114,37 @@ document.querySelector('#close-search').onclick = () =>{
     searchForm.classList.remove('active');
 }
 
+// navbar.active
+let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.header .navbar');
+
+menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+    searchBtn.classList.remove('fa-times');
+    searchForm.classList.remove('active');
+}
+
+
+
+// search-box
+let searchBox = document.querySelector('#search-box');
+let images = document.querySelectorAll('.search-form .search-container .box');
+
+searchBox.oninput = () =>{
+   images.forEach(hide => hide.style.display = 'none');
+   let value = searchBox.value;
+   images.forEach(filter =>{
+      let title = filter.getAttribute('data-title');
+      if(value == title){
+         filter.style.display = 'block';
+      }
+      if(searchBox.value == ''){
+         filter.style.display = 'none';
+      }
+   });
+};
+
+
 
 

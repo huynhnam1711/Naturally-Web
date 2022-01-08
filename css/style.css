@@ -121,6 +121,7 @@ body {
   height: 3rem;
 }
 .header .navbar a {
+  text-transform: none;
   font-size: 1.7rem;
   margin-left: 1.5rem;
   color: #333;
@@ -153,7 +154,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   visibility: hidden;
   opacity: 0;
 }
@@ -167,43 +168,77 @@ body {
   right: 2.5rem;
   cursor: pointer;
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .header .search-form #close-search:hover {
   color: #319736;
   cursor: pointer;
 }
-.header .search-form form {
-  width: 70rem;
+.header .search-form .absolute-box {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+}
+.header .search-form .absolute-box input {
+  width: 80%;
   margin: 0 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   border-bottom: 0.2rem solid #fff;
   display: flex;
   align-items: center;
-}
-.header .search-form form input {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #fff;
   text-transform: none;
   background: none;
   padding-right: 2rem;
 }
-.header .search-form form input::-webkit-input-placeholder {
-  color: #aaa;
+.header .search-form .absolute-box input::-webkit-input-placeholder {
+  color: #bbb;
 }
-.header .search-form form input::-ms-input-placeholder {
-  color: #aaa;
+.header .search-form .absolute-box input::-ms-input-placeholder {
+  color: #bbb;
 }
-.header .search-form form label {
-  font-size: 3rem;
-  cursor: pointer;
+.header .search-form .absolute-box .search-container {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 3rem;
+}
+.header .search-form .absolute-box .search-container .box {
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  background-color: #333;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.2rem solid #fff;
+  width: 35rem;
+  border-radius: 0.5rem;
+  animation: fadeIn 0.2s linear;
+  display: none;
+}
+.header .search-form .absolute-box .search-container .box img {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+.header .search-form .absolute-box .search-container .box h3 {
+  font-size: 2rem;
   color: #fff;
 }
-.header .search-form form label:hover {
-  color: #219150;
-}
 
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.5) translateY(-10px);
+    opacity: 0;
+  }
+}
 .home {
   display: flex;
   align-items: center;
@@ -488,14 +523,17 @@ body {
   .header .logo {
     margin-bottom: 0.5rem;
   }
+  .header .search-form {
+    width: 100%;
+  }
+  .header .search-form input {
+    width: 90%;
+  }
   .header .search-form .account-2 {
     display: flex;
   }
   .header .search-form .icons {
     display: flex;
-  }
-  .header .navbar {
-    display: none;
   }
 
   .login-account2 .box-container2 {
@@ -533,6 +571,33 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #f2f2f2;
+    border: 0.2rem 0 0.2rem 0 #666;
+    padding: 0 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    box-shadow: 0 0.5rem 1rem black;
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 999999999999;
+  }
+  .header .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 2.5rem 1rem;
+  }
+
   .products-preview .preview h3 {
     font-family: "Courier New", Courier, monospace;
     color: #444;

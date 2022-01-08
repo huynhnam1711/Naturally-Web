@@ -136,6 +136,7 @@ body{
     .navbar{
 
         a{
+            text-transform: none;
             font-size: 1.7rem;
             margin-left: 1.5rem;
             color: #333;
@@ -170,19 +171,17 @@ body{
         left: 0;
         right: 0;
         bottom: 0;
-        // transform: translateY(-100%);
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        background: rgba(0,0,0,.4);
+        background: rgba(0,0,0,.8);
         visibility: hidden;
         opacity: 0;
     
         &.active{
-            // transform: translateY(0);
             visibility: visible;
             opacity: 1;
         }
@@ -193,52 +192,88 @@ body{
             right: 2.5rem;
             cursor: pointer;
             color: #fff;
-            font-size: 4rem;
+            font-size: 3rem;
     
             &:hover{
                 color: #319736;
                 cursor: pointer;
             }
         }
-    
-        form{
-            width: 70rem;
-            margin: 0 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 0.2rem solid #fff;
-            display: flex;
-            align-items: center;
-    
+        
+        .absolute-box{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            right: 10%;
+            bottom: 0;
             input{
+                width: 80%;
+                margin: 0 2rem;
+                padding-bottom: 1rem;
+                border-bottom: 0.2rem solid #fff;
+                display: flex;
+                align-items: center;
                 width: 100%;
-                font-size: 2rem;
+                font-size: 1.7rem;
                 color: #fff;
                 text-transform: none;
                 background: none;
                 padding-right: 2rem;
     
                 &::-webkit-input-placeholder{
-                    color: #aaa;
+                    color: #bbb;
                 }
     
                 &::-ms-input-placeholder {
-                    color: #aaa;
+                    color: #bbb;
                 }
             }
     
-            label{
-                font-size: 3rem;
-                cursor: pointer;
-                color: #fff;
-                
-                &:hover{
-                    color: #219150;
+    
+            .search-container{
+              
+                padding-top: 1rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap:20px;
+                padding-top: 3rem;
+    
+                .box{
+                    padding:1.5rem;
+                    margin-bottom: 3rem;
+                    background-color: #333;
+                    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+                    border:.2rem solid #fff;
+                    width: 35rem;
+                    border-radius: .5rem;
+                    animation: fadeIn .2s linear;
+                    display: none;
+                    
+                    img{
+                        height: 25rem;
+                        width: 100%;
+                        object-fit: cover;
+                        margin-bottom: 1rem;
+                        border-radius: .5rem;
+                    }
+    
+                    h3{
+                        font-size: 2rem;
+                        color: #fff;
+                    }
                 }
             }
         }
     }
 }
-
+@keyframes fadeIn {
+  0%{
+    transform: scale(.5) translateY(-10px);
+    opacity: 0;
+  }
+}
 
 
 
@@ -577,28 +612,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // responsive
 @media (max-width:1070px){
     .header{   
@@ -610,10 +623,10 @@ body{
         }
 
         .search-form{
-            // width: 100%;
+            width: 100%;
 
             input{
-                // width: 90%
+                width: 90%
             }
 
             .account-2{
@@ -625,9 +638,6 @@ body{
             }
         }
 
-        .navbar{
-            display: none;
-        }
     }
 
     // account-login 2
@@ -676,8 +686,42 @@ body{
 
 }
 
-@media (max-width:768px){
-  
+@media (max-width:768px){  
+    .header{
+        #menu-btn{
+            display: inline-block;  
+        }
+        
+        #menu-btn.fa-times{
+            transform: rotate(180deg);
+        }
+
+        .navbar{
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            background: #f2f2f2;
+            border: .2rem 0 .2rem 0 #666;
+            padding: 0 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,1);
+
+
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                z-index: 999999999999;
+                
+            }
+
+            a{
+                display: block;
+                font-size: 2rem;
+                margin: 2.5rem 1rem;
+            }
+        }
+    }
+
     .products-preview{
         
         .preview{
@@ -742,7 +786,6 @@ body{
                         text-decoration: line-through;
                     }
                 }
-
             }
         }
     }

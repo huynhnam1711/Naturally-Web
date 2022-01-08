@@ -276,9 +276,6 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .navbar {
-    display: none;
-  }
   .login-account2 .box-container2 {
     width: 90%;
   }
