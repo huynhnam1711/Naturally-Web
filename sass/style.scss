@@ -118,46 +118,30 @@ body{
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     background: #fff;
 
+    #menu-btn{
+        display: none;
+    }
 
-
-    .logo {
+    .logo{
         width: 11rem;
         height: 4rem;
         cursor: pointer;
 
-         img{
-             width: 100%;
-             height: 3rem;
-         }
+        img{
+            width: 100%;
+            height: 3rem;
+        }
     }
 
     .navbar{
-        display: flex;
-        cursor: pointer;
 
         a{
             font-size: 1.7rem;
-            color: #2c2c54;
-            margin: 0 1rem;
-            text-transform: none;
+            margin-left: 1.5rem;
+            color: #333;
 
             &:hover{
-                color: #319736;
-            }
-        }
-
-        .account{
-            font-size: 1.7rem;
-            color: #2c2c54;
-            margin: 0 1rem;
-
-            &:hover{
-                color: #6E8A3C;
-                cursor: pointer;
-            }
-
-            #result{
-                margin-right: 2rem;
+                color: #4e7013;
             }
         }
     }
@@ -166,12 +150,12 @@ body{
 
         div,
         a{
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #2c2c54;
             margin-left: 1.5rem;
 
             &:hover{
-                color: #319736;
+                color: #ff9f1a;
             }
         }
 
@@ -186,13 +170,14 @@ body{
         left: 0;
         right: 0;
         bottom: 0;
+        // transform: translateY(-100%);
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(0,0,0,.8);
-        // transform: translateY(-100%);
+        margin: 0 auto;
+        background: rgba(0,0,0,.4);
         visibility: hidden;
         opacity: 0;
     
@@ -208,19 +193,18 @@ body{
             right: 2.5rem;
             cursor: pointer;
             color: #fff;
-            font-size: 3rem;
+            font-size: 4rem;
     
             &:hover{
                 color: #319736;
+                cursor: pointer;
             }
         }
     
         form{
-            position: absolute;
-            top: 10%;
-            width: 90%;
+            width: 70rem;
             margin: 0 2rem;
-            padding-bottom: 1rem;
+            padding-bottom: 2rem;
             border-bottom: 0.2rem solid #fff;
             display: flex;
             align-items: center;
@@ -243,7 +227,7 @@ body{
             }
     
             label{
-                font-size: 2.5rem;
+                font-size: 3rem;
                 cursor: pointer;
                 color: #fff;
                 
@@ -621,7 +605,7 @@ body{
         padding: 3rem 2rem;
 
         .logo {
-            max-width: 100%;
+            // max-width: 100%;
             margin-bottom: .5rem;
         }
 
